@@ -1,0 +1,92 @@
+# ── Build artifacts ──────────────────────────────────────────────────────────
+*.o
+*.obj
+*.elf
+*.bin
+*.hex
+*.map
+*.lst
+*.lss
+*.eep
+*.sym
+*.d
+*.su
+*.a
+*.lib
+
+# Keep UF2 firmware files — these are the flashable output we want to track
+# *.uf2
+
+# ── QMK specific ─────────────────────────────────────────────────────────────
+.build/
+build/
+*.qmk
+
+# ── CMake / Pico SDK ─────────────────────────────────────────────────────────
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+.eggs/
+*.egg-info/
+dist/
+*.egg
+
+# ── Node / JS tooling ────────────────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+package-lock.json
+
+# ── IDE / editors ────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+.project
+.cproject
+.settings/
+
+# ── OS junk ──────────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ── Logs / temp ──────────────────────────────────────────────────────────────
+*.log
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+
+# ── Credentials / secrets ────────────────────────────────────────────────────
+.env
+.env.*
+secrets.*
+*.pem
+*.key
