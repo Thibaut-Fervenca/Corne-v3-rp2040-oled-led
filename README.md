@@ -1,9 +1,17 @@
 # Corne v3 (RP2040) — QMK keymap
 
-Custom QMK keymap for a Corne (crkbd) split keyboard with OLED displays and
-per-key RGB matrix, running on an RP2040 controller. Structured as a **QMK
-External Userspace** repo, so it builds without modifying your `qmk_firmware`
-clone.
+**QMK firmware for a Corne (crkbd) v3 split keyboard driven by an RP2040
+microcontroller.** Building this repo produces a `.uf2` flash file that you load
+onto the board's RP2040 (via the `RPI-RP2` bootloader drive). It's a custom
+keymap featuring OLED animations (boot octopus, per-half last-key readout) and a
+per-key RGB matrix. Structured as a **QMK External Userspace** repo, so it builds
+without modifying your `qmk_firmware` clone.
+
+## Demo
+
+![Corne OLED + RGB demo](media/demo-1.gif)
+
+![Corne OLED close-up](media/demo-2.gif)
 
 ## What's here
 
