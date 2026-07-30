@@ -44,15 +44,21 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
 #ifdef RGB_MATRIX_ENABLE
-#   define RGB_MATRIX_MAXIMUM_BRIGHTNESS 120  // Limite la consommation pour votre port USB
-#   define RGB_MATRIX_SLEEP                  // Éteint le RGB quand l'ordi se met en veille
-#   undef RGB_MATRIX_KEYPRESSES              // Pas d'effet réactif à la frappe
+#   define RGB_MATRIX_MAXIMUM_BRIGHTNESS 120
+#   define RGB_MATRIX_SLEEP
+#   define RGB_MATRIX_KEYPRESSES
 
 // Animations globales activées
 #   define ENABLE_RGB_MATRIX_SOLID_COLOR        // Couleur fixe
 #   define ENABLE_RGB_MATRIX_BREATHING          // Effet de respiration
 #   define ENABLE_RGB_MATRIX_CYCLE_ALL          // Arc-en-ciel fluide global
 #   define ENABLE_RGB_MATRIX_CYCLE_LEFT_RIGHT   // Arc-en-ciel défilant
+
+#   define ENABLE_RGB_MATRIX_SOLID_REACTIVE_MULTIWIDE
+#   define ENABLE_RGB_MATRIX_SOLID_REACTIVE_MULTICROSS
+#   define ENABLE_RGB_MATRIX_SOLID_REACTIVE_MULTINEXUS
+#   define ENABLE_RGB_MATRIX_SPLASH
+#   define ENABLE_RGB_MATRIX_SOLID_SPLASH
 #endif
 
 #ifdef OLED_ENABLE

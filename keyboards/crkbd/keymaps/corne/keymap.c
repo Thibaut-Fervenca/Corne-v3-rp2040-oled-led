@@ -20,6 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 enum custom_keycodes {
     UG_ONLY = SAFE_RANGE,   // toggle: underglow-only <-> all LEDs
+    RGB_RCT,
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -64,7 +65,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
         KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,                        KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,  KC_F12,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      RM_TOGG, RM_HUEU, RM_SATU, RM_VALU, UG_ONLY, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, RM_TOGG, RM_NEXT, XXXXXXX,
+      RM_TOGG, RM_HUEU, RM_SATU, RM_VALU, UG_ONLY, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, RM_TOGG, RM_NEXT, RGB_RCT,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       RM_NEXT, RM_HUED, RM_SATD, RM_VALD, XXXXXXX, QK_BOOT,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
@@ -249,6 +250,23 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 rgb_matrix_set_flags(LED_FLAG_UNDERGLOW);
                 rgb_matrix_set_color_all(0, 0, 0);   // blank the per-key LEDs now
             }
+#endif
+        }
+        return false;
+    }
+    if (keycode == RGB_RCT) {
+        if (record->event.pressed) {
+#ifdef RGB_MATRIX_ENABLE
+            static const uint8_t reactive_modes[] = {
+                RGB_MATRIX_SOLID_REACTIVE_MULTIWIDE,
+                RGB_MATRIX_SOLID_REACTIVE_MULTICROSS,
+                RGB_MATRIX_SOLID_REACTIVE_MULTINEXUS,
+                RGB_MATRIX_SPLASH,
+                RGB_MATRIX_SOLID_SPLASH,
+            };
+            static uint8_t reactive_idx = 0;
+            rgb_matrix_mode(reactive_modes[reactive_idx]);
+            reactive_idx = (reactive_idx + 1) % (sizeof(reactive_modes) / sizeof(reactive_modes[0]));
 #endif
         }
         return false;
