@@ -295,6 +295,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 case KC_TAB:  s = "TAB"; break;
                 case KC_SPC:  s = "SPC"; break;
                 case KC_DEL:  s = "DEL"; break;
+                case KC_HOME: s = "HOME"; break;
+                case KC_END:  s = "END"; break;
+                case KC_PGUP: s = "PGUP"; break;
+                case KC_PGDN: s = "PGDN"; break;
                 case KC_LEFT: s = "<";   break;
                 case KC_RIGHT:s = ">";   break;
                 case KC_UP:   s = "^";   break;
