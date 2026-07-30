@@ -44,7 +44,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
 #ifdef RGB_MATRIX_ENABLE
-#   define RGB_MATRIX_MAXIMUM_BRIGHTNESS 120
+#   define RGB_MATRIX_MAXIMUM_BRIGHTNESS 255
 #   define RGB_MATRIX_SLEEP
 #   define RGB_MATRIX_KEYPRESSES
 
