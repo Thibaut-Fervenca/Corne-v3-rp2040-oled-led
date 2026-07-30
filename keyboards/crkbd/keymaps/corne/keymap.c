@@ -399,6 +399,11 @@ static const char *layer_name(void) {
 }
 
 bool oled_task_user(void) {
+    if (last_input_activity_elapsed() > OLED_TIMEOUT) {
+        oled_off();
+        return false;
+    }
+
     oled_clear();
     uint32_t be = timer_elapsed32(g_boot_time);
 

@@ -56,8 +56,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #endif
 
 #ifdef OLED_ENABLE
-#   define OLED_TIMEOUT 30000          // Turn off OLED after 30s of inactivity
-#   define OLED_BRIGHTNESS 200         // Set screen brightness (0-255)
+#   define OLED_TIMEOUT 300000         // Turn off OLED after 5 min of inactivity
+#   define OLED_BRIGHTNESS 255         // Set screen brightness (0-255)
 #   define OLED_UPDATE_INTERVAL 30     // ~33 fps redraw for smooth animation
 #endif
 
