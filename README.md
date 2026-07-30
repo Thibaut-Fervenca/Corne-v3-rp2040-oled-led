@@ -73,11 +73,11 @@ Keys with two symbols show `base shifted` (e.g. `/ ?` types `/`, or `?` with Shi
 ### Layer 1 — NUMS (hold left thumb)
 ```
 ┌─────┬─────┬─────┬─────┬─────┬─────┐   ┌─────┬─────┬─────┬─────┬─────┬─────┐
-│ TAB │  1  │  2  │  3  │  4  │  5  │   │  6  │  7  │  8  │  9  │  0  │ BSPC│
+│ ESC │  1  │  2  │  3  │  4  │  5  │   │  6  │  7  │  8  │  9  │  0  │ DEL │
 ├─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┤
-│ LSFT│  ·  │  ·  │  ·  │  ·  │  ·  │   │  ←  │  ↓  │  ↑  │  →  │  ·  │  ·  │
+│ LSFT│  ·  │  ·  │  ·  │  ·  │  ·  │   │  ←  │  ↓  │  ↑  │  →  │ PGUP│ HOME│
 ├─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┤
-│ LCTL│  ·  │  ·  │  ·  │  ·  │  ·  │   │  ·  │  ·  │  ·  │  ·  │  ·  │  ·  │
+│ LCTL│  ·  │  ·  │  ·  │  ·  │  ·  │   │  ·  │  ·  │  ·  │  ·  │ PGDN│ END │
 └─────┴─────┴─────┴─────┴─────┴─────┘   └─────┴─────┴─────┴─────┴─────┴─────┘
                   ┌─────┬─────┬─────┐   ┌─────┬─────┬─────┐
                   │ LGUI│  ▽  │ SPC │   │ ENT │MO(3)│ RALT│
@@ -87,7 +87,7 @@ Keys with two symbols show `base shifted` (e.g. `/ ?` types `/`, or `?` with Shi
 ### Layer 2 — SYMB (hold right thumb)
 ```
 ┌─────┬─────┬─────┬─────┬─────┬─────┐   ┌─────┬─────┬─────┬─────┬─────┬─────┐
-│ TAB │  !  │  @  │  #  │  $  │  %  │   │  ^  │  &  │  *  │  (  │  )  │ BSPC│
+│ ESC │  !  │  @  │  #  │  $  │  %  │   │  ^  │  &  │  *  │  (  │  )  │ DEL │
 ├─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┤
 │ LSFT│  ·  │  ·  │  ·  │  ·  │  ·  │   │  -  │  =  │  [  │  ]  │  \  │  `  │
 ├─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┤
@@ -103,7 +103,7 @@ Keys with two symbols show `base shifted` (e.g. `/ ?` types `/`, or `?` with Shi
 ┌─────┬─────┬─────┬─────┬─────┬─────┐   ┌─────┬─────┬─────┬─────┬─────┬─────┐
 │  F1 │  F2 │  F3 │  F4 │  F5 │  F6 │   │  F7 │  F8 │  F9 │ F10 │ F11 │ F12 │
 ├─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┤
-│ TOG │ HUE+│ SAT+│ VAL+│ UGLO│  ·  │   │  ·  │  ·  │  ·  │ TOG │ NEXT│  ·  │
+│ TOG │ HUE+│ SAT+│ VAL+│ UGLO│  ·  │   │  ·  │  ·  │  ·  │ TOG │ NEXT│ RCT │
 ├─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┤
 │ NEXT│ HUE-│ SAT-│ VAL-│  ·  │ BOOT│   │  ·  │  ·  │  ·  │  ·  │  ·  │  ·  │
 └─────┴─────┴─────┴─────┴─────┴─────┘   └─────┴─────┴─────┴─────┴─────┴─────┘
@@ -113,6 +113,6 @@ Keys with two symbols show `base shifted` (e.g. `/ ?` types `/`, or `?` with Shi
 ```
 
 **Legend:** ▽ = transparent (same key as the layer below) · · = unused ·
-arrows ←↓↑→ = KC_LEFT/DOWN/UP/RIGHT.
+arrows ←↓↑→ = KC_LEFT/DOWN/UP/RIGHT · nav cluster **PGUP/PGDN/HOME/END** and **DEL** live on NUMS.
 RGB keys — **TOG** toggle, **HUE± / SAT± / VAL±** colour/brightness, **NEXT** next effect,
-**UGLO** underglow-only, **BOOT** bootloader (flash mode).
+**RCT** cycle reactive/splash effects, **UGLO** underglow-only, **BOOT** bootloader (flash mode).
