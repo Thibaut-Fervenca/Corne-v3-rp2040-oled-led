@@ -44,7 +44,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
 #ifdef RGB_MATRIX_ENABLE
-#   define RGB_MATRIX_MAXIMUM_BRIGHTNESS 255
+#   define RGB_MATRIX_MAXIMUM_BRIGHTNESS 120
 #   define RGB_MATRIX_SLEEP
 #   define RGB_MATRIX_KEYPRESSES
 
@@ -63,12 +63,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #ifdef OLED_ENABLE
 #   define OLED_TIMEOUT 300000         // Turn off OLED after 5 min of inactivity
-#   define OLED_BRIGHTNESS 255         // Set screen brightness (0-255)
+#   define OLED_BRIGHTNESS 200         // Set screen brightness (0-255)
 #   define OLED_UPDATE_INTERVAL 30     // ~33 fps redraw for smooth animation
 #endif
 
 // Sync layer + caps-lock state to the slave so both OLEDs match, and register
 // the custom transaction used to push the "last key touched" to the slave.
+#define SPLIT_USB_DETECT
 #define SPLIT_LAYER_STATE_ENABLE
 #define SPLIT_LED_STATE_ENABLE
 #define SPLIT_TRANSACTION_IDS_USER USER_SYNC_KEY
